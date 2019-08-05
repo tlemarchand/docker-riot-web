@@ -13,7 +13,7 @@ wget $dl_url -O $riot_latest.tar.gz
 tar xvzf $riot_latest.tar.gz
 docker build -t tlemarchand/riot-web:$riot_latest --build-arg version=$riot_latest .
 
-docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USER}" --password-stdin
 docker push tlemarchand/riot-web:$riot_latest
 
 docker tag tlemarchand/riot-web:$riot_latest tlemarchand/riot-web:latest
