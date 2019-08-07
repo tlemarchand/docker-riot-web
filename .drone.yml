@@ -19,4 +19,4 @@ steps:
     password:
       from_secret: docker_password
     build_args:
-      - version=`cat version`
+      - version=$(<version)
