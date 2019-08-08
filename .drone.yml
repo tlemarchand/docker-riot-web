@@ -4,6 +4,8 @@ name: default
 steps:
 - name: tag
   image: debian:10
+  environment:
+    DRONE_BUILD_NUMBER: $DRONE_BUILD_NUMBER
   commands:
   - apt-get update
   - apt-get install -y jq curl
