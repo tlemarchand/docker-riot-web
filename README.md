@@ -3,7 +3,7 @@
 
 This Riot web container image aims to be very simple (based on Nginx official) and always up to date thanks to a Drone.io pipeline running every week.
 
-You have to provide a "config.json" file to configure your instance at this path : /usr/share/nginx/html/config.json
+You have to provide a "config.json" file to configure your instance at this path : /usr/share/nginx/html/config.json .
 On Kubernetes it can be mounted from a ConfigMap.
 
 Tagging is done this way :
