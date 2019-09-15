@@ -7,7 +7,7 @@ steps:
   commands:
   - apt-get update
   - apt-get install -y jq curl
-  - curl -s 'https://api.github.com/repos/vector-im/riot-web/releases/latest' | jq -r '.name' > version
+  - curl -s 'https://api.github.com/repos/vector-im/riot-web/releases/latest' | jq -j -r '.name' > version
   - echo -n 'latest,' | cat - version > .tags
   - echo -n ',' | cat - version >> .tags
   - echo -n -$DRONE_BUILD_NUMBER >> .tags
