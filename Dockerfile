@@ -1,4 +1,4 @@
-FROM nginx:1.17
+FROM nginx:1.21
 
 COPY version /tmp/version
 COPY gzip.conf /etc/nginx/conf.d/
