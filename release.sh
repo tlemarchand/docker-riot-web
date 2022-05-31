@@ -4,5 +4,5 @@ curl -s 'https://api.github.com/repos/vector-im/element-web/releases/latest' | j
 git add -A
 git commit -m `cat version`
 git push origin master
-git tag `cat version`
-git push origin `cat version`
+git tag `cat version` -f
+git push origin `cat version` -f
