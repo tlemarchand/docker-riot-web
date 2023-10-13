@@ -1,4 +1,4 @@
-FROM nginx:1.21
+FROM nginx:1.25-bookworm
 
 COPY version /tmp/version
 COPY gzip.conf /etc/nginx/conf.d/
