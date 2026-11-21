@@ -1,4 +1,4 @@
-FROM nginx:1.29-trixie
+FROM nginx:1.31-trixie
 
 COPY version /tmp/version
 COPY gzip.conf /etc/nginx/conf.d/
